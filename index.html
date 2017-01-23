@@ -42,7 +42,7 @@
 
           <div id="answer" class="hidden">
             <img src="img/bob.png" class="rounded">
-            <p class="lead lg">Yes</p>
+            <p id="answer-text" class="lead lg"></p>
           </div>
         </div>
       </div>
@@ -56,10 +56,12 @@
 
         var $question = $('#question');
         var $answer = $('#answer');
+        var $answerText = $('#answer-text');
 
         $('#question').click(function() {
           $question.addClass('hidden');
           $answer.removeClass('hidden');
+          $answerText.text(ANSWER);
         })
       });
     </script>
